@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header ul{
+    list-style-type: none;
+}
+.header ul li{
+    float: right;
+}
