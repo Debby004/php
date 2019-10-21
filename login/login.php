@@ -23,6 +23,8 @@
     </form>
     <table>
     <?php
+
+
     $db = new  MySQLi("localhost","root","root","bysj");
     $sql = "select * from user";
     $result = $db->query($sql);
