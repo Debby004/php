@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,26 +43,59 @@
             </tr>            
             ";
 
+=======
+<?php
+header('Content-type:text/html;charset=utf-8;');
+class base{
+    public $data = array();      
+    public $key;
+    public $value;
+    public function index(){        
+        $con = new MySQLi("localhost","root","root","bysj");
+        if(!$con){
+            die("数据库连接失败!");            
+>>>>>>> dev
         }
+        $sql = "select a.name,b.name as faculty_name from user a, faculty b where a.faculty_id = b.id";
+        $result = $con->query($sql);
+        if(!$result){    
+            die("数据查询失败!");
+        } 
+        foreach($result as $k => $v){
+            echo "<br>".$v['name'];
+            var_dump($v);
+        } 
+  
+        while($row = $result->fetch_row()){
+            foreach($row as $k){
+                echo "<br>".$k;    
+            }
+        } 
     }
-    ?> 
-        
-</table>
 
- <?php
-    $db2 = new MySQLi("localhost","root","root","bysj");
-    $sql2 = "select * from faculty";
-    $return2 =  $db2->query($sql2);
-    if($return2){
-        while ($attr2 = $return2->fetch_row()){
-            echo "
-                <tr>
-                    <td>{$attr2[0]}</td>
-                    <td>{$attr2[1]}</td>
-                    <td>{$attr2[2]}</td>  
-                </tr> ";
+    public function mysql(){
+        $conn = mysql_connect("localhost","root","root");
+        if(!$conn){
+            echo "数据库连接失败".mysql_error();
+            die();            
+        }
+        mysql_set_charset('utf-8');
+        mysql_select_db('bysj');
+        $sql = "select account,name  from user";
+        $result = mysql_query($sql);
+        while($row = mysql_fetch_array($result)){
+            echo "<br>".$row['account']."--".$row['name'];
         }
     }
-?>
-</body>
-</html>
+}
+
+$index = new base();
+$index->index();
+$index->mysql();
+ 
+
+
+
+
+
+
