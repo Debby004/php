@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>首页</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
+
 <body>
-<ul>
-    <li><a href="#">首页</a></li>
-    <li><a href="login.html">登录</a></li>
-    <li><a href="reg.html">注册</a></li>
-    <br>
+  <div class="header">
+    <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="login.html">登录</a></li>
+      <li><a href="reg.html">注册</a></li>
+    </ul>
+  </div>
+  <div class="obb">
     <h1>欢迎您!</h1>
-    <br>
-</ul>
+    <div class="oss">
+      有的网站页面中如果加入好看的背景图片是更能够引人注目的，可是我们该怎么进行网页背景图片设置呢？而且通常会被要求html背景图片平铺的展现效果。这对于稍懂一些html/css知识的朋友来说应该并不是难事。那么本篇文章主要针对新手朋友们，来详细介绍html背景图的添加使用方法。可供大家参考。
+
+
+      <p>
+        盒子模型：
+        盒子壁 border
+        内边距 padding
+        盒子内容 width + height
+        margin + border + padding +center(width+height)
+      </p>
+      <p>
+        块级元素、内联元素inline(feature:1.不可以通过css改变宽高；内容决定元素所占位置):
+        span strong a em del
+      </p>
+      <p>
+        行级元素block(feature:可以通过css改变宽高，独占一行)：div p ul li ol form address
+      </p>
+      <p>
+        行级块元素 ：(feature:内容决定大小，可以改变宽高)：img
+      </p>
+      <p>
+        position:absolute;脱离原来位置进行定位
+        position:relative;保留原来位置进行定位
+
+      </p>
+
+    </div>
+    <del>原价50元</del>
+    <span><a>现价30元</a></span>
+    <address>www.abc.com</address>
+    <address>www.abc.com</address>
+    <img src="image/bg.jpg" alt="">
+    <img src="image/bg.jpg" alt="">
+    <img src="image/bg.jpg" alt="">
+    <img src="image/bg.jpg" alt="">
+  </div>
 
 
 </body>
+
 </html>

@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+body{
+    background-image: url("image/bg.jpg") no_reaper center center fixed;
+}
+.header{
+    margin: 20px; 
+    text-align: right;
+}
+.header ul{ 
+    list-style:none; 
+    display: inline-block;
+    padding-top: 20px;  
+    padding-right: 160px;  
+}
+.header ul li{ 
+    width: 90px;
+    color:black;
+    float:left;  
+    font-size: 20px;  
+}
+.header ul li a{    
+    text-decoration: none; 
+}
+
+.header ul li a:hover{    
+    background-color: plum;
+    color: red;
+    border-radius: 3px;
+}
+.obb{
+    margin: 20px;
+    padding: 5px;
+    border:2px solid black;
+    font-size: 16px;
+    line-height: 20px;
+    text-align:left;
+    border-radius: 30px;
+}  
+.obb h1{
+    line-height: 50px;
+    text-align: center;
+}
+.oss{    
+    text-indent: 2em;
+}
+.obb del{
+    color:#999 ;
+    padding: 2em;
+    text-decoration:underline;
+}
+.obb span{ 
+    text-decoration: none;
+    cursor: pointer;
+}
+.abb a{
+    text-decoration:none;
+}
+.obb address{
+    font-style: normal;
+    color: #c00;
+    text-indent: 2em;
+}
+.obb span a:hover {
+    text-decoration:underline;
+    background-color: orange;
+    color: papayawhip;
+    border-radius: 3px;
+}
+.obb img{
+    width: 200px;
+    margin-left: -5px;;
+}
+.red{ 
+    position: relative;
+    left: 50%;  
+    margin-left:-100px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border:10px solid black;
+    padding: 30px 20px 10px 10px;
+    
+}
+.red img{  
+    width: 200px;
+    height: 200px;
+}
+.green{
+    position: absolute;
+    top:200px;
+    left:50%;
+    margin-left: -100px;
+    margin-bottom: 20px ;
+    margin-top: 20px ;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+
+}
+.black{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+
+}
