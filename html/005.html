@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .red {
+    background-color: pink;
+    height: 50px;
+    opacity: 0.6;
+  }
+
+  .wheat {
+    height: 50px;
+    width: 1200px;
+    background-color: wheat;
+    margin: 0 auto;
+  }
+
+  .wheat::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .wheat ul {
+    list-style: none;
+  }
+
+  .wheat ul li {
+    float: left;
+    margin: 0 20px;
+    font-size: 25px;
+    line-height: 50px;
+  }
+
+  .wheat ul li a {
+    text-decoration: none;
+    display: inline-block;
+    color: tomato;
+    padding: 0 15px;
+  }
+
+  .wheat ul li a:hover {
+    background-color: orangered;
+    color: white;
+    border-radius: 15px;
+  }
+</style>
+
+<body>
+  <div class="red">
+    <div class="wheat">
+      <ul>
+        <li class="item"><a href="#">天猫</a></li>
+        <li class="item"><a href="#">聚划算</a></li>
+        <li class="item"><a href="#">双十一</a></li>
+        <li class="item"><a href="#">儿童节</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -13,26 +13,205 @@
     padding: 0;
   }
 
-  .black {
-    height: 50px;
-    background-color: black;
-    margin-right: 50px;
-  }
-
-  .red {
-    background-color: red;
-    height: 50px;
-    width: 50px;
+  .wrapper {
     position: absolute;
     right: 0;
-    opacity: 0.1;
-    /* float: right; */
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    opacity: 0.2;
+  }
+
+  .wrapper2::before {
+    content: "132313";
+  }
+
+
+  .wrapper2 {
+    height: 300px;
+    background-color: red;
+    margin-right: 300px;
+  }
+
+  .content {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+
+  }
+
+  .wrapper4 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin-left: 40px;
+    margin-top: 40px;
+    /* float: left; */
+    /* overflow: hidden; */
+    /* display: inline-block; */
+
+  }
+
+
+  .content4 {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin-left: 40px;
+    margin-top: 50px;
+    /* position: absolute; */
+
+  }
+
+
+  .wrapper5 {
+    margin-left: 40px;
+    /* display: inline-block; */
+    overflow: hidden;
+    float: left;
+  }
+
+  .demo1,
+  .demo2,
+  .demo3,
+  .demo4,
+  .demo5 {
+    height: 10px;
+    width: 100px;
+    background-color: red;
+    margin-bottom: 20px;
+  }
+
+  .demo6 {
+    height: 10px;
+    width: 100px;
+    background-color: green;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .fa::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .no1 {
+    height: 50px;
+    background-color: green;
+    margin: 100px;
+
+  }
+
+
+  .spanfa::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .span {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    opacity: 0.2;
+  }
+
+
+  .no2 {
+    height: 100px;
+    background-color: green;
+    margin: 10px;
+
   }
 </style>
 
 <body>
-  <div class="red"></div>
-  <div class="black"></div>
+
+
+  <p>
+
+    想要两个div并列显示，可以先将一个div定位position设为absolute，right设为0；第二个div的margin-right设为第一个div的宽
+  </p>
+  <div class="wrapper">
+    wrapper
+    <div class="content">content</div>
+  </div>
+  <div class="wrapper2">
+
+  </div>
+  <div class="wrapper3">
+
+  </div>
+
+
+  <p>
+    margin塌陷
+    垂直方向的margin,父子元素的margin值是重合的，取其中最大值
+  </p>
+  <p>
+    这是其中一个bug,好像父亲的棚没有了。
+    <br>
+    第一种，给父元素加border->
+    {border-top: 1px solid black;}
+    <br>
+    bfc:block format context
+    <br>
+    第二种 给父元素加overflow：hidden<br>
+    第二种 给父元素加position：absolute<br>
+    给子元素加position：absolute<br>
+    第三种 给父元素加display：inline-block<br>
+    position :absolute（如果给父级加，会脱离原来的位置，后面的元素会跑上来，加在子元素中，父级后面的不会跑上来，但是兄弟节点照样会跑上来）<br>
+    display:left\right（会把块级元素变成行级元素） <br>
+    display:inline-block<br>
+    overflow:hidden（超出父元素的部分会隐藏）<br>
+  </p>
+  <div class="wrapper4">
+    <div class="content4"></div>
+  </div>
+  <p>
+    两个div要是不想共享margin垂直方向上的值，可以给他们或者其中一个的父元素变成bfc元素
+  </p>
+  <p>另外一个bug如果给一个div设为float:left/right之后，他就会变成行级元素，如果给他的兄弟节点也变成float:left他们就会在一个水平线上浮动了,而且文字会包裹他们</p>
+  <p>另外一个bug如果给一个div设为float:left/right之后，他就会变成行级元素，如果给他的兄弟节点也变成float:left他们就会在一个水平线上浮动了,而且文字会包裹他们</p>
+  <p>另外一个bug如果给一个div设为float:left/right之后，他就会变成行级元素，如果给他的兄弟节点也变成float:left他们就会在一个水平线上浮动了,而且文字会包裹他们</p>
+  <p>另外一个bug如果给一个div设为float:left/right之后，他就会变成行级元素，如果给他的兄弟节点也变成float:left他们就会在一个水平线上浮动了,而且文字会包裹他们</p>
+  <p>另外一个bug如果给一个div设为float:left/right之后，他就会变成行级元素，如果给他的兄弟节点也变成float:left他们就会在一个水平线上浮动了,而且文字会包裹他们</p>
+  <p>另外一个bug如果给一个div设为float:left/right之后，他就会变成行级元素，如果给他的兄弟节点也变成float:left他们就会在一个水平线上浮动了,而且文字会包裹他们</p>
+  <hr>
+
+  <p>
+    因为bfc的元素变成浮动元素了，他的兄弟节点div会看不到他，浮动元素有浮动流，块级元素看不到浮动元素，有这么一个解决办法，就是把bfc元素父元素加一个伪元素
+    div::after
+    display:block content:"" clear:both
+  </p>
+  <div class="fa">
+    <div class="wrapper5">
+
+      <div class="demo1"></div>
+      <div class="demo2"></div>
+      <div class="demo3"></div>
+      <div class="demo4"></div>
+      <div class="demo5"></div>
+    </div>
+
+    <div class="wrapper5">
+      <div class="demo1"></div>
+      <div class="demo2"></div>
+      <div class="demo3"></div>
+      <div class="demo4"></div>
+      <div class="demo5"></div>
+    </div>
+  </div>
+  <div class="no1"></div>
+  <p>position:absolute float:left/right 之后，打内部把元素转换成inline-block</p>
+  <div class="spanfa">
+    <span class="span">123</span>
+  </div>
+  <div class="no2"></div>
 </body>
 
 </html>
